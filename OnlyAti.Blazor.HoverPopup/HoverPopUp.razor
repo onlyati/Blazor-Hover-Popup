@@ -1,0 +1,9 @@
+﻿<div style="position: relative; widht: auto; height: auto; display: inline-block;" @onmouseover="DisplayPopup" id="@normalId">
+    @NormalDisplay
+    @if(ShowPopup)
+    {
+        <div style="position: absolute; left: @(left)px; top: @(top)px; display: inline-block; z-index: 100;" @onmouseout="() => ShowPopup = false" id="@popupId">
+            @PopupDisplay
+        </div>
+    }
+</div>
